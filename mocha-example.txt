@@ -1,0 +1,288 @@
+
+
+	Line 1: PS C:\Users\Han\Desktop\code> mkdir mocha-example
+	Line 12: PS C:\Users\Han\Desktop\code> cd .\mocha-example\
+	Line 13: PS C:\Users\Han\Desktop\code\mocha-example> npm init -y
+	Line 30: PS C:\Users\Han\Desktop\code\mocha-example> mkdir src
+	Line 41: PS C:\Users\Han\Desktop\code\mocha-example> mkdir test
+	Line 52: PS C:\Users\Han\Desktop\code\mocha-example> cd src
+	Line 53: PS C:\Users\Han\Desktop\code\mocha-example\src> ni index.js
+	Line 64: PS C:\Users\Han\Desktop\code\mocha-example\src> ls
+	Line 75: PS C:\Users\Han\Desktop\code\mocha-example\src> cd ../test
+	Line 76: PS C:\Users\Han\Desktop\code\mocha-example\test> ni index.spec.js
+	Line 87: PS C:\Users\Han\Desktop\code\mocha-example\test> cd ..
+	Line 88: PS C:\Users\Han\Desktop\code\mocha-example> npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/register mocha chai
+	Line 114: PS C:\Users\Han\Desktop\code\mocha-example> ls
+	Line 129: PS C:\Users\Han\Desktop\code\mocha-example> ni babel.config.js
+	Line 140: PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+	Line 175: PS C:\Users\Han\Desktop\code\mocha-example> ni .mocharc.yaml
+	Line 186: PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+	Line 231: PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+	Line 252: PS C:\Users\Han\Desktop\code\mocha-example>
+	
+
+
+C:\Users\Han\Desktop\code\mocha-example\babel.config.js
+
+module.exports = {
+  presets: ["@babel/preset-env"]
+};
+
+
+C:\Users\Han\Desktop\code\mocha-example\.mocharc.yaml
+
+require:
+  - '@babel/register'
+
+
+Log :
+
+PS C:\Users\Han\Desktop\code> mkdir mocha-example
+
+
+    目錄: C:\Users\Han\Desktop\code
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 08:43                mocha-example
+
+
+PS C:\Users\Han\Desktop\code> cd .\mocha-example\
+PS C:\Users\Han\Desktop\code\mocha-example> npm init -y
+Wrote to C:\Users\Han\Desktop\code\mocha-example\package.json:
+
+{
+  "name": "mocha-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> mkdir src
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 08:44                src
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> mkdir test
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 08:44                test
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> cd src
+PS C:\Users\Han\Desktop\code\mocha-example\src> ni index.js
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example\src
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2020/10/10  上午 08:50              0 index.js
+
+
+PS C:\Users\Han\Desktop\code\mocha-example\src> ls
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example\src
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2020/10/10  上午 08:50              0 index.js
+
+
+PS C:\Users\Han\Desktop\code\mocha-example\src> cd ../test
+PS C:\Users\Han\Desktop\code\mocha-example\test> ni index.spec.js
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example\test
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2020/10/10  上午 08:51              0 index.spec.js
+
+
+PS C:\Users\Han\Desktop\code\mocha-example\test> cd ..
+PS C:\Users\Han\Desktop\code\mocha-example> npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/register mocha chai
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules\mocha\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN mocha-example@1.0.0 No description
+npm WARN mocha-example@1.0.0 No repository field.
+
++ @babel/core@7.11.6
++ @babel/preset-env@7.11.5
++ chai@4.2.0
++ @babel/register@7.11.5
++ @babel/cli@7.11.6
++ mocha@8.1.3
+added 426 packages from 194 contributors and audited 428 packages in 34.237s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+PS C:\Users\Han\Desktop\code\mocha-example> ls
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 08:53                node_modules
+d-----      2020/10/10  上午 08:50                src
+d-----      2020/10/10  上午 08:51                test
+-a----      2020/10/10  上午 08:54         164956 package-lock.json
+-a----      2020/10/10  上午 08:54            428 package.json
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> ni babel.config.js
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2020/10/10  上午 08:54              0 babel.config.js
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+
+> mocha-example@1.0.0 test C:\Users\Han\Desktop\code\mocha-example
+> mocha
+
+
+C:\Users\Han\Desktop\code\mocha-example\test\index.spec.js:1
+import { expect } from 'chai';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:1070:16)
+    at Module._compile (internal/modules/cjs/loader.js:1120:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.exports.requireOrImport (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\esm-utils.js:20:12)
+    at Object.exports.loadFilesAsync (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\esm-utils.js:33:34)
+    at Mocha.loadFilesAsync (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\mocha.js:427:19)
+    at singleRun (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\cli\run-helpers.js:156:15)
+    at exports.runMocha (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\cli\run-helpers.js:225:10)
+    at Object.exports.handler (C:\Users\Han\Desktop\code\mocha-example\node_modules\mocha\lib\cli\run.js:366:11)
+    at C:\Users\Han\Desktop\code\mocha-example\node_modules\yargs\lib\command.js:241:49
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! mocha-example@1.0.0 test: `mocha`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the mocha-example@1.0.0 test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Han\AppData\Roaming\npm-cache\_logs\2020-10-10T01_01_14_398Z-debug.log
+PS C:\Users\Han\Desktop\code\mocha-example> ni .mocharc.yaml
+
+
+    目錄: C:\Users\Han\Desktop\code\mocha-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2020/10/10  上午 09:02              0 .mocharc.yaml
+
+
+PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+
+> mocha-example@1.0.0 test C:\Users\Han\Desktop\code\mocha-example
+> mocha
+
+
+
+  #changeStr
+    √ should not change empty string
+    √ should not change words with no vowels
+    √ should change a vowel
+    √ should change consonents and a vowel
+    √ should not change less than 30 percent vowels
+    √ should change continuous vowels once
+    √ should change multiple sets of vowels
+    √ should change capital vowels
+    √ should error on undefined input
+
+
+  9 passing (19ms)
+
+PS C:\Users\Han\Desktop\code\mocha-example>
+PS C:\Users\Han\Desktop\code\mocha-example> npm run test
+
+> mocha-example@1.0.0 test C:\Users\Han\Desktop\code\mocha-example
+> mocha
+
+
+
+  #changeStr
+before
+beforeEach
+    √ should not change empty string
+afterEach
+beforeEach
+    √ should not change words with no vowels
+afterEach
+beforeEach
+    √ should change a vowel
+afterEach
+beforeEach
+    √ should change consonents and a vowel
+afterEach
+beforeEach
+    √ should not change less than 30 percent vowels
+afterEach
+beforeEach
+    √ should change continuous vowels once
+afterEach
+beforeEach
+    √ should change multiple sets of vowels
+afterEach
+beforeEach
+    √ should change capital vowels
+afterEach
+beforeEach
+    √ should error on undefined input
+afterEach
+after
+
+
+  9 passing (30ms)
+
+PS C:\Users\Han\Desktop\code\mocha-example>
