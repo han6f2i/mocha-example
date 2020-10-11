@@ -1,11 +1,16 @@
 import {
-  assert
+  assert,
+  expect
 } from 'chai';
 
 // https://www.npmjs.com/package/sinon
 // https://sinonjs.org
 // https://sinonjs.org/releases/v9.2.0/
+
 import sinon from 'sinon';
+import sinonTest from 'sinon-test';
+const test = sinonTest(sinon);
+
 // https://www.npmjs.com/package/should
 import * as should from 'should';
 
@@ -22,6 +27,8 @@ const {
   window
 } = new JSDOM("");
 const $ = require("jquery")(window);
+
+var store = require('store')
 
 // https://www.zcfy.cc/article/sinon-tutorial-javascript-testing-with-mocks-spies-stubs-422.html
 // https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/
@@ -92,6 +99,7 @@ describe('saveUser', function () {
     $('body').append($div).append($div).append($div).append($div);
 
     console.log(spy.withArgs($div).callCount);
+    expect(spy.withArgs($div).callCount).to.equal(4);
     spy.restore();
   });
 
@@ -188,5 +196,65 @@ describe('jQuery.ajax', () => {
       url: '/todo/42/items'
     }));
   });
+});
 
+function incrementStoredData(value, amount) {
+  var total = store.get(value) || 0;
+  var newtotal = total + amount;
+  store.set(value, newtotal);
+}
+
+describe('incrementStoredData', function () {
+  it('should increment stored value by one', function () {
+    var storeMock = sinon.mock(store);
+    storeMock.expects('get').withArgs('data').returns(0);
+    storeMock.expects('set').once().withArgs('data', 1);
+
+    incrementStoredData('data', 1);
+
+    storeMock.restore();
+    storeMock.verify();
+  });
+});
+
+var myOtherFunc = {
+  callback() {
+
+  }
+}
+
+function myFunc(condition) {
+  if (condition) {
+    myOtherFunc.callback();
+  }
+}
+
+describe('sinon-test', function () {
+  // https://www.npmjs.com/package/sinon-test
+  // ??? not working
+  // it('should do something 1', test(function () {
+  //   var spy1 = this.spy(myFunc);
+  //   var spy2 = this.spy(myOtherFunc);
+  //   myFunc(1);
+  //   myFunc(2);
+  //   assert(spy1.calledWith(1)); // AssertionError: Unspecified AssertionError
+  //   assert(spy1.calledWith(2)); // AssertionError: Unspecified AssertionError
+  // })); //auto-cleanup	
+
+  it('should do something 3', test(function () {
+    // var spy1 = sinon.spy(myFunc);
+    var spy2 = this.spy(myOtherFunc, 'callback');
+    myFunc(1);
+    // console.log("spy1.callCount first",spy1.callCount);
+    console.log("spy2.callCount first", spy2.callCount);
+    // assert(spy2.calledWith(1)); // AssertionError: Unspecified AssertionError
+    // expect(spy1.callCount).to.equal(1);
+    expect(spy2.callCount).to.equal(1);
+    myFunc(2);
+    // console.log("spy1.callCount second",spy1.callCount);
+    console.log("spy2.callCount second", spy2.callCount);
+    // assert(spy2.calledWith(2));  // AssertionError: Unspecified AssertionError
+    // expect(spy1.callCount).to.equal(2);
+    expect(spy2.callCount).to.equal(2);
+  })); //auto-cleanup ('sinon-test')
 });

@@ -622,3 +622,75 @@ after
   17 passing (81ms)
 
 PS C:\Users\Han\Desktop\code\mocha-example>
+
+PS C:\Users\Han\Desktop\code\mocha-example> npm i -D store
+
+PS C:\Users\Han\Desktop\code\mocha-example> npm install sinon-test -D
+
+PS C:\Users\Han\Desktop\code\mocha-example> npx mocha
+
+
+  #changeStr
+before
+beforeEach
+    √ should not change empty string
+afterEach
+beforeEach
+    √ should not change words with no vowels
+afterEach
+beforeEach
+    √ should change a vowel
+afterEach
+beforeEach
+    √ should change consonents and a vowel
+afterEach
+beforeEach
+    √ should not change less than 30 percent vowels
+afterEach
+beforeEach
+    √ should change continuous vowels once
+afterEach
+beforeEach
+    √ should change multiple sets of vowels
+afterEach
+beforeEach
+    √ should change capital vowels
+afterEach
+beforeEach
+    √ should error on undefined input
+afterEach
+after
+
+  spy
+[ 'Hello', 'World' ]
+    √ spy.firstCall.args
+1
+    √ spy.callCount
+
+  myFunction
+    √ should.call.the.callback.function
+
+  saveUser
+4
+    √ append
+    √ should.call.callback.after.saving
+    √ should send correct parameters to the expected URL
+
+  Sample Sinon Stub Take 2
+    √ should pass
+
+  jQuery.ajax
+    √ makes a GET request for todo items
+
+  incrementStoredData
+    √ should increment stored value by one
+
+  sinon-test
+spy2.callCount first 1
+spy2.callCount second 2
+    √ should do something 3
+
+
+  19 passing (47ms)
+
+PS C:\Users\Han\Desktop\code\mocha-example>
