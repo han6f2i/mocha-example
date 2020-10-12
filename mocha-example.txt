@@ -770,3 +770,26 @@ statusCode: 200
   1 passing (331ms)
 
 PS C:\Users\Han\Desktop\code\mocha-example>
+PS C:\Users\Han\Desktop\code\mocha-example> npx mocha .\test\getPhotosByAlbumId.test.js
+
+
+  withoutStub: getPhotosByAlbumId
+    √ should getPhotosByAlbumId (550ms)
+
+
+  1 passing (558ms)
+
+PS C:\Users\Han\Desktop\code\mocha-example>
+PS C:\Users\Han\Desktop\code\mocha-example> npx mocha .\test\getPhotosByAlbumId.test.js
+
+
+  withoutStub: getPhotosByAlbumId
+    √ should getPhotosByAlbumId (591ms)
+
+  with Stub: getPhotosByAlbumId
+    √ should getPhotosByAlbumId
+
+
+  2 passing (611ms)
+
+PS C:\Users\Han\Desktop\code\mocha-example>
