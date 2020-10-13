@@ -1,3 +1,4 @@
+// https://stackabuse.com/using-stubs-for-testing-in-javascript-with-sinon-js/
 const request = require('request');
 
 const getPhotosByAlbumId = (id) => {

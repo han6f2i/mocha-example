@@ -1,3 +1,4 @@
+// https://stackabuse.com/using-stubs-for-testing-in-javascript-with-sinon-js/
 const expect = require('chai').expect;
 const getPhotosByAlbumId = require('../src/getPhotosByAlbumId.js');
 const sinon = require('sinon');

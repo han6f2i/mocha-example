@@ -793,3 +793,15 @@ PS C:\Users\Han\Desktop\code\mocha-example> npx mocha .\test\getPhotosByAlbumId.
   2 passing (611ms)
 
 PS C:\Users\Han\Desktop\code\mocha-example>
+PS C:\Users\Han\Desktop\code\mocha-example> npx mocha .\test\getAlbumById.mock.test.js
+
+
+  with mock: getPhotosByAlbumId
+    √ should getPhotosByAlbumId
+
+
+  1 passing (10ms)
+
+error: null
+statusCode: 200
+PS C:\Users\Han\Desktop\code\mocha-example>
